@@ -1,0 +1,25 @@
+{
+  "name": "work-station",
+  "version": "0.0.0",
+  "author": "Jawad A Bashoroun",
+  "email": "professorbashorun@gmail.com",
+  "date": "Sat Apr 28 01:56:38 UTC 2018",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "development": "jawparser ./index.html ./build/development",//build jawparser later as time goes on
+    "production" : "jawparser ./index.html ./build/production",
+    "test" : "jawparser ./index.html ./build/production"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "jade": "~1.11.0",
+    "jaw-parser": "1.0.0",
+    "morgan": "~1.9.0",
+    "serve-favicon": "~2.4.5",
+    "three": "^0.92.0"
+  }
+}

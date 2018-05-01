@@ -1,0 +1,570 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<title>NEURON MACHINE LEARNING VIRUS</title>
+	<meta charset="utf-8"> 
+	<meta http-equiv="x-ua-compatible" content="ie=edge"> 
+	<meta name="description" content="This is a neurone based artificial intelligence virus"> 
+	<!-- Chrome, Firefox OS, Opera and Vivaldi --> 
+	<meta name="theme-color" content="#0c2124"> 
+	<!-- Windows Phone --> 
+	<meta name="msapplication-navbutton-color" content="#0c2124"> 
+	<!-- iOS Safari --> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="./public/stylesheets/styles.css">
+</head>
+<body>
+
+
+
+	<!-- NEURON APP CONTAINER -->
+	<!-- =================================================================== -->
+	<div id="app" neuron-state={{Neuron.mode}}></div>
+
+	<!-- Background Audio -->
+	<div neuron-state={{Neuron.mode}}>
+		<!-- Top Info -->
+		  <div id="title">
+		    <span id="name">MACHINE LEARNING NEURONAL VIRUS</span><!--<span id="track"></span>-->
+		    <div id="timer">0:00</div>
+		    <div id="duration">0:00</div>
+		  </div>
+
+		  <!-- Controls -->
+		  <div class="controlsOuter">
+		    <div class="controlsInner">
+		      <div id="loading"></div>
+		      <div class="btn" id="playBtn"></div>
+		      <div class="btn" id="pauseBtn"></div>
+		      <div class="btn" id="prevBtn"></div>
+		      <div class="btn" id="nextBtn"></div>
+		    </div>
+		    <div class="btn" id="playlistBtn"></div>
+		    <div class="btn" id="volumeBtn"></div>
+		  </div>
+
+		  <!-- Progress -->
+		  <div id="waveform"></div>
+		  <div id="progress"></div>
+
+		  <!-- Playlist -->
+		  <div id="playlist">
+		    <div id="list"></div>
+		  </div>
+
+		  <!-- Volume -->
+		  <div id="volume" class="fadeout">
+		    <div id="barFull" class="bar"></div>
+		    <div id="barEmpty" class="bar"></div>
+		    <div id="sliderBtn"></div>
+		  </div>
+
+		  <!-- Scripts -->
+		  <script src="./public/javascipts/howler.core.js"></script>
+		  <script src="./public/javascripts/siriwave.js"></script>
+		  <script src="./public/javascripts/player.js"></script>
+	</div>
+
+
+
+	<!-- NEURON DATA STRUCTURE -->
+	<!-- =================================================================== -->
+	<script type="text/javascript" language="javascript" neuron-state={{Neuron.mode}} directory={{Neuron.directory.data.schema}} status={{Neuron.status.NOT_DONE}} >
+		Neuron = {//super_class=object
+			mode:"development",//type=string value=development|production|test
+			type:"natural_languange",//type=string value=natural_language|vision|speech|audio
+			status : {
+				DONE:1,
+				NOT_DONE:0
+			},
+			domain:{//type=object
+				development:{//type=development
+					client:"http://localhost:3000/client",//type=string value=cleint_url
+					server:"http://localhost:3000/server"//type=string value=server_url
+				},
+				test:{//type=object
+					client:"http://localhost:3000/client",//type=string value=client_url
+					server:"http://localhost:3000/server"//type=string value=server_url
+				},
+				production:{//type=object
+					client:"http://www.analyticus.io/client",//type=string value=client_url
+					server:"http://admin.analyticus.io/server"//type=string value=client_url
+				},
+				api : {//type=object
+					private : {//type=object
+
+					},
+					public : {//type=object
+
+					},
+					free : {//type=object
+
+					}
+				},
+			},
+			directory : {
+				data : {
+					schema : "/model/neurone.js",
+				},
+				sensor : {
+					view : "/view/sensor.html",
+					request : "/public/javascripts/sensor.js",
+					peripheral : "/router/sensor.js"
+				},
+				processor : {
+					preparer : "/src/processor/preparer.py",
+					analyser : "/src/processor/analyser.py",
+					learner : "/src/processor/learner.py"
+				},
+				motor : {
+					peripheral : "/router/motor.js",
+					response : "/public/javascripts/motor.js",
+					view : "/view/motor.html"
+				},
+				virus : {
+					frontend : "/javascripts/virus.js",
+					backend : "/src/virus.js"
+				},
+				inject : {
+					frontend: "/javascripts/inject.js",
+					backend: "/src/inject.js"
+				},
+				initializer : {
+					frontend : "",
+					backend : ""
+				},
+				launcher : {
+					frontend : "",
+					backend : ""
+				}
+			},
+			dependencies : {//type=object
+				frontend : {//type=object
+
+				},
+				backend : {//type=object
+
+				}
+			},
+			preparation : { //type=actionable_object
+				gather : function(events){ 
+					//gathers training data from training points
+				},
+				structure: function(events){
+					//structures training training points 
+				},	
+				vectorize: function(events){
+					//vectorized data fulling if needed.
+				}	
+
+			},
+			analysis : {//type=actionable_object
+				cluster : function(events){
+					//finds clustering in data
+				},
+				correlation: function(events){
+					//finds correlations in data
+				}
+			},
+			intelligence : { //type=actionable_object
+				learn : function(events){
+
+				},
+				trian : function(events){
+
+				},
+				test : function(events){
+
+				},
+				predict: function(events){
+
+				},
+				infer: function(events){
+
+				},
+				discover : function(events){
+
+				}
+			},
+			prepare: function(events){
+				//prepare the neurons and put in offline train mode
+			},
+			run: function(){
+				//runs the the neuron and render
+			},
+			inject : function(events){
+				//injects the neuron into a target
+			},
+			reproduce : function(events){
+				//reproduction to code 
+			},
+			die : function(events){
+				//kills the neuron
+			},
+			kill : function(events){
+				//same as die
+			}}
+	</script>
+
+
+
+
+
+
+	<!-- NEURON GEOMETRY -->
+	<!-- =================================================================== -->
+	<script type="text/javascript" src="./public/javascripts/three.js"></script>
+	<script name={{Neuron.geometry}} type=text/javascript languange="html" mode={{Neuron.mode}} directory={{Neuron.directory.sensor.view}} status={{Neuron.status.NOT_DONE}}>
+	
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+			
+			var renderer = new THREE.WebGLRenderer();	
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+
+			var sun_geometry = new THREE.SphereGeometry(0.5,10,10,10);
+			var sun_material = new THREE.MeshBasicMaterial({color:'yellow'});
+			var sun = new THREE.Mesh(sun_geometry, sun_material);
+
+
+			var earth_geometry = new THREE.SphereGeometry(0.5,10,10);
+			var earth_material = new THREE.MeshBasicMaterial({color:'grey'});
+			var earth = new THREE.Mesh(earth_geometry, earth_material);
+
+
+			var stars = [];
+			for (var i=0; i<1000; i++){
+				var star_geometry = new THREE.SphereGeometry(0.1, 10,10);
+				var star_material = new THREE.MeshBasicMaterial({color:'grey'});
+				var star = new THREE.Mesh(star_geometry, star_material)
+				stars.push(star);
+				scene.add(star);
+				star.position.x = Math.floor(10*Math.random());
+				star.position.y = Math.floor(10*Math.random());
+			}
+				
+
+
+
+			scene.add( sun );
+			scene.add( earth );
+
+
+			camera.position.z = 5;
+			camera.position.y = 0;
+			counter = 0;
+			theta=90;
+			var animate = function () {
+				requestAnimationFrame( animate );
+				theta += 0.005;
+				for(var i=0; i < stars.length; i++){
+					stars[i].position.x -= 0.005*Math.sin(theta);
+					stars[i].position.y += 0.005*Math.cos(theta);
+					stars[i].rotation.y -= 0.1;
+					stars[i].rotation.z -= 0.1;
+
+				}
+				sun.position.x -= 0.005*Math.sin(theta);
+				sun.position.y -= 0.005*Math.cos(theta);
+				sun.rotation.y -= 0.1;
+				sun.rotation.z -= 0.1;
+
+				earth.position.x += 0.005*Math.sin(theta);
+				earth.position.y += 0.005*Math.cos(theta);
+				earth.rotation.y += 0.1;
+				earth.rotation.z += 0.1;
+				counter++;
+					
+				renderer.render(scene, camera);
+			};
+			animate();
+	</script>
+
+
+
+
+
+
+
+	<!-- NEURON SENSOR 	-->
+	<!-- =================================================================== -->
+	<script type="text/javascripts" language="javascript" mode={{Neuron.mode}} directory={{Neuron.directory.sensor.response}} status={{Neuron.status.NOT_DONE}}>
+	</script>
+
+
+
+
+
+	<!-- NEURON SENSOR PERIPHERAL 	-->
+	<!-- =================================================================== -->
+	<script type="text/javascript" language="javascript" mode={{Neuron.mode}} directory={{Neuron.directory.sensor.peripheral}} status={{Neuron.status.NOT_DONE}}>
+		var express = require("express");
+		var processor = require("processor");
+		var app = require("express");
+
+		var SENSORS = [];//give list of callable sensors
+		for(var SENSOR in SENSORS){
+			app.use(SENSORS, function(req,res,next,done){
+				processor.call(req.params).then(function(response){
+					res.json(response);
+				}).catch(funtion(err){
+					res.json(err);
+				});
+			});
+		}
+	</script>
+
+
+
+
+
+	<!-- NEURON PROCESSOR DATA-PREPARER LAYER	-->
+	<!-- =================================================================== -->
+	<script type="text/javascript" language="python" mode={{Neuron.mode}} directory={{Neuron.directory.processor.preparer}} status={{Neuron.status.NOT_DONE}}>
+		import pandas as pd;
+		import numpy as np;
+
+		def clean_data(events):
+			dataframes = pd.read_csv(events_filename);
+			pass;
+
+
+		def structure_data(events):
+			dataframes = pd.read_csv(events_filename);
+			pass;
+
+
+		def vectorize_data(events_filename);
+			dataframes = pd.read_csv(events);
+			pass;
+	</script>
+
+
+
+
+
+	<!-- NEURON PROCESSOR DATA ANALYSIS LAYER	-->
+	<!-- =================================================================== -->
+	<script type="text/javascript" language="python" mode={{Neuron.mode}} directory={{Neuron.directory.processor.analyser}} status={{Neuron.status.NOT_DONE}}>
+		import pandas as pd;
+		import numpy as np;
+		import Neruone.processor as processor;
+
+		def correlations(events_filename):
+			dataframes = pd.read_csv(events);
+			pass;
+
+
+		def clusters(events_filename):
+			dataframes = pd.read_csv(events);
+			pass;
+
+		def learn_clusters(events_filename):
+		processor//learn
+
+		def learn_correlation(events_filename):
+		//do something.
+	</script>
+
+
+
+
+
+	<!-- NEURON PROCESSOR LEARNER 	-->
+	<!-- =================================================================== -->
+	<script type="text/javascript" language="python" mode={{Neuron.mode}} directory={{Neuron.directory.procesor.learner}} status={{Neuron.status.NOT_DONE}}>
+		import theano.tensors as T;//
+		import numpy as np;
+		import theano
+		import logging as log;
+
+		Nx = 1000;//number of features 
+		Ny = 10;//number of labels
+		lambda1 = 0;//to be corrected
+		lambda2 = 0;//to be corrected
+
+		x = T.dvector("x", Nx);//declare x as vector such that x[0] = 1;
+		y = T.dvector("y", Ny);//declare y as a vector for multiclass classificiation
+		theta = T.dtensor(np.zeros((Nx, Ny), dtype=theano.config.floatX), name="theta");//initialize theta as zero matrix;
+
+		prob_y_given_x_n_theta = T.nnet.sigmoid(T.dot(theta,x));//probability of y given x and theta
+		y_pred = T.argmax(prob_y_given_x_n_theta);//predicted value of y using maximum likelihood estimation
+		loss = -T.sum((y*T.log(prob_y_given_x_n_theta)) + ((1-y)*T.log(1-prob_y_given_x_n_theta)));//google.com
+		regularizer = lambda1*T.abs(theta) + lambda1*T.dot(theta, theta);//google.co
+		J = lost //- regularization; add regularizer when needed
+		dJ_dtheta = T.grad(J,theta);
+
+
+
+
+		def train(events_filename, model_filename="", learning_rate=0.001, optimizer='gradient_descent', minibatch_size=1, precision=0.95, epoches=1000)://optimizer='gradient_descent|stochastic_gradient_descent|minibatch_gradient_descent'
+			//if optimization processes is stochastic gradient descent then minibatch_size is set to one. if optimization processes is 
+			updates = [(W, W-=learning_rate*dJ_dW),(B, B-=learning_rate*dJ_dB)];//define update function
+			gradient_descent = theano.function([x, y],[J, dJ_dtheta, theta], updates=updates);//compile gradient descent algorit
+			(x_tr, y_tr),(x_v, y_v) = extract_training_data(events_filename);//get training data and validation data from event file
+			
+			batchs = split_batch(minibatch_size, y_tr.shape[0]);
+			validation_frequency = y_tr.shape[0]/5000;
+			current_precision = 0;
+			cursor_position = 0;
+			model_filename = "";
+			
+			//repeat gradient descent algorithm for epoches
+			for epoch in range(epoches):
+				//train for each minibatch
+				if current_precision < precision:
+					for minibatch in batchs:
+						cost, grad_cost, parameters = gradient_descent(x_tr[minibatch], y_tr[minibatch]);
+						if(cursor_position % validation_frequency == 0):
+							current_precision = validate(x_v, y_v, parameters=parameters);
+			//save model in a file name $model_filename
+			with f open(model_filename, 'rw'):
+				f.save({cost:cost, cost_grad:grad_cost, parameters:parameters, predictor:y_pred, loss:loss,})
+			return model_filename;
+
+
+
+
+		def split_batch(minibatch_size, batch_size):
+			no_of_splits = batch_size/minibatch_size;
+			batch_array = np.arange(batch_size);
+			return np.array_split(batch_array, no_of_splits);
+
+
+
+
+		def validate(x, y, parameters=parameters):
+
+
+
+		def test(events_filename):
+			pass;
+
+
+		def evaluate(events_filename):
+			pass;
+
+
+		def predict(events_filename):
+			pass;
+
+
+		def infer(events_filename):
+			pass;
+	</script>
+
+
+
+
+
+	<!-- NEURONE MOTOR PERIPHERAL 	-->
+	<!-- =================================================================== -->
+	<script type="text/javascript" language="javascript" mode={{Neuron.mode}} directory={{Neuron.directory.motor.peripheral}} status={{Neuron.status.NOT_DONE}}>
+		var express = require("express");
+		var processor = require("processor");
+		var app = require("express");
+
+		var MOTORS = [];//give list of callable motors here
+		for(var MOTOR in MOTORS){
+			app.use(MOTOR, function(req,res,next,done){
+				processor.call(req.params).then(function(response){
+					res.json(response);
+				}).catch(funtion(err){
+					res.json(err);
+				});
+			});
+		}
+	</script>
+
+
+
+
+
+	<!-- NEURON MOTOR RESPONSE 	-->
+	<!-- =================================================================== -->
+	<script type="text/javascript" language="javascript" mode={{Neuron.mode}} directory={{Neuron.directory.motor.response}} status={{Neuron.status.NOT_DONE}}>
+		import @@Neuron.response;
+		import @@Neuron.response as response;
+
+		response = reponse();
+		counter = 0;
+		theta=90;
+		function animate (response) {
+			requestAnimationFrame( animate );
+			theta += 0.01;
+			cube.position.x += 0.005*Math.sin(theta);
+			cube.position.y += 0.005*Math.cos(theta);
+			cube.rotation.y += 0.1;
+			cube.rotation.z += 0.1;
+			counter++;
+
+			renderer.render(scene, camera);
+		};
+		animate(response);
+	</script>
+
+
+
+
+
+
+	<!-- NEURON MOTOR VIEW 	-->
+	<!-- =================================================================== -->
+	<script type="text/javascript" language="javascript" mode={{Neuron.mode}} directory={{Neuron.directory.motor.view}} status={{Neuron.status.NOT_DONE}}>
+
+	</script>
+
+
+
+
+
+
+
+	<!-- NEURON VIRUS ENABLER	-->
+	<!-- =================================================================== -->
+	<script type="text/javascript" language="javascript" mode={{Neuron.mode}} directory={{Neuron.directory.virus}} status={{Neuron.status.NOT_DONE}}>
+	</script>
+
+
+
+
+
+
+	<!-- NEURON VIRUS INJECTOR 	-->
+	<!-- =================================================================== -->
+	<script type="text/javascript" language="javascript" mode={{Neuron.mode}} directory={{Neuron.directory.injector}} status={{Neuron.status.NOT_DONE}}>
+		app = document.getElementById('app');
+		script = document.createElement('script');
+	</script>
+
+
+
+
+
+
+
+	<!-- NEURON INITIALISATION 	-->
+	<!-- =================================================================== -->
+	<script type="text/javascript" language="javascript" mode={{Neuron.mode}} directory={{Neuron.directory.initialiser}} status={{Neuron.status.NOT_DONE}}>
+		app = document.getElementById('app');
+		script = document.createElement('script');
+	</script>
+
+
+
+
+
+
+	<!-- NEURON LAUNCHER 	-->
+	<!-- =================================================================== -->
+	<script type="text/javascript" language="javascript" mode={{Neuron.mode}} directory={{Neuron.directory.launcher}} status={{Neuron.status.NOT_DONE}}>
+		app = document.getElementById('app');
+		script = document.createElement('script');
+		app.appendChild(script);
+	</script>
+
+
+</body>
+</html>
